@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TAC-TOE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-indigo-400 to-cyan-400">
+    <div class="game-title">
+        <h1 id="game-text">Tic Tac Toe</h1>
+    </div>
+    <div class="new-game">
+        <button onclick="startgame()">New Game</button>
+    </div>
+    <div class="turn">
+        <h2 id="player1">Player1 turn-X</h2>
+    </div>
+    <div class="turn">
+        <h2 id="player2" style="visibility: hidden;">Player2 turn-O</h2>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="game">
+                <button class="box box1" onclick="myFUNCTION(this)"></button>
+                <button class="box box2" onclick="myFUNCTION(this)"></button>
+                <button class="box box3" onclick="myFUNCTION(this)"></button>
+                <button class="box box4" onclick="myFUNCTION(this)"></button>
+                <button class="box box5" onclick="myFUNCTION(this)"></button>
+                <button class="box box6" onclick="myFUNCTION(this)"></button>
+                <button class="box box7" onclick="myFUNCTION(this)"></button>
+                <button class="box box8" onclick="myFUNCTION(this)"></button>
+                <button class="box box9" onclick="myFUNCTION(this)"></button>
+            </div>
+        </div>
+    </main>
+    
+    <h2 id="winner-message" style="display: none;"></h2>
+    <script src="script.js"></script>
+</body>
+
+</html>
