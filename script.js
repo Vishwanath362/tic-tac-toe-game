@@ -62,7 +62,7 @@ const checkWin = () => {
 
     for (const condition of winningConditions) {
         const [a, b, c] = condition.map(cls => document.getElementsByClassName(cls)[0]);
-        if (a.innerHTML && a.innerHTML === b.innerHTML && a.innerHTML === c.innerHTML) {
+        if (a.innerHTML && a.innerHTML === b.innerHTML && a.innerHTML === c.innerHTML) {          
             return true;
         }
     }

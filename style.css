@@ -3,7 +3,7 @@
 body {
     font-family: Arial, sans-serif; /* Sets the font for the entire page */
     display: flex; /* Uses Flexbox for centering content */
-    flex-direction: column; /* Arranges content vertically */
+    flex-direction:column; /* Arranges content vertically */
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
     height: 100%; /* Full viewport height */
@@ -55,7 +55,7 @@ body {
 }
 
 main {
-    /* margin-top: 1px; */
+    margin-top: 50px;
     display: flex; /* Uses Flexbox for centering the main container */
     justify-content: center; /* Centers the container horizontally */
     align-items: center; /* Centers the container vertically */
@@ -84,6 +84,7 @@ main {
     color: rgb(142, 42, 42);
     font-weight: bold;
     font-size: 65px;
+    box-shadow: 5px 5px 15px 5px rgba(51, 17, 175, 0.4); /* Adds a shadow effect */
 }
 .box:hover{
     background-color: rgb(149, 186, 17);
@@ -91,7 +92,8 @@ main {
 .turn{
     height: 50px;
     background-color: rgb(37, 96, 132);
-    display: flex;
+    display: block;
+    /* flex-direction: column; */
     text-align: center;
     align-items: center;
     /* width: 200px; */
@@ -105,4 +107,8 @@ main {
 }
 .turn{
     visibility: hidden;
+}
+#winner-message{
+    font-size: 30px;
+    margin-top: 30px;
 }
