@@ -9,35 +9,35 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-to-r from-indigo-400 to-cyan-400">
-    <div class="game-title">
-        <h1 id="game-text">Tic Tac Toe</h1>
-    </div>
-    <div class="new-game">
-        <button onclick="startgame()">New Game</button>
-    </div>
-    <div class="turn">
-        <h2 id="player1">Player1 turn-X</h2>
-        <h2 id="player2" style="visibility: hidden;">Player2 turn-O</h2>
+<body class="bg-gradient-to-r from-indigo-400 to-cyan-400 min-h-screen flex flex-col justify-center items-center">
+    <div class="game-title mb-5">
+        <h1 id="game-text" class="text-6xl md:text-8xl font-bold">Tic Tac Toe</h1>
     </div>
 
-    <h2 id="winner-message" style="display: none;"></h2>
-    <main>
-        <div class="container">
-            <div class="game">
-                <button class="box box1" onclick="myFUNCTION(this)"></button>
-                <button class="box box2" onclick="myFUNCTION(this)"></button>
-                <button class="box box3" onclick="myFUNCTION(this)"></button>
-                <button class="box box4" onclick="myFUNCTION(this)"></button>
-                <button class="box box5" onclick="myFUNCTION(this)"></button>
-                <button class="box box6" onclick="myFUNCTION(this)"></button>
-                <button class="box box7" onclick="myFUNCTION(this)"></button>
-                <button class="box box8" onclick="myFUNCTION(this)"></button>
-                <button class="box box9" onclick="myFUNCTION(this)"></button>
-            </div>
+    <div class="new-game mb-5">
+        <button onclick="startgame()" class="px-4 py-2 bg-gradient-to-br from-orange-500 to-cyan-600 text-green-200 rounded-md text-lg hover:scale-105 transition-transform">New Game</button>
+    </div>
+
+    <div class="turn flex flex-col items-center space-y-2 mb-5">
+        <h2 id="player1" class="text-xl md:text-3xl">Player1 turn-X</h2>
+        <h2 id="player2" class="text-xl md:text-3xl hidden">Player2 turn-O</h2>
+    </div>
+
+    <h2 id="winner-message" class="hidden text-2xl md:text-4xl text-center mb-5"></h2>
+
+    <main class="container flex justify-center items-center">
+        <div class="game grid grid-cols-3 gap-3">
+            <button class="box box1" onclick="myFUNCTION(this)"></button>
+            <button class="box box2" onclick="myFUNCTION(this)"></button>
+            <button class="box box3" onclick="myFUNCTION(this)"></button>
+            <button class="box box4" onclick="myFUNCTION(this)"></button>
+            <button class="box box5" onclick="myFUNCTION(this)"></button>
+            <button class="box box6" onclick="myFUNCTION(this)"></button>
+            <button class="box box7" onclick="myFUNCTION(this)"></button>
+            <button class="box box8" onclick="myFUNCTION(this)"></button>
+            <button class="box box9" onclick="myFUNCTION(this)"></button>
         </div>
     </main>
-    
     
     <script src="./script.js"></script>
 </body>
