@@ -87,3 +87,6 @@ const displayWinner = (message) => {
     winnerMessage.innerHTML = message;
     disablebtns();
 }
+function exit(){
+    window.close();
+}
