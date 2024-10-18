@@ -1,37 +1,31 @@
-let turn = true; // true for Player 1 (X), false for Player 2 (O)
-
+let turn = true;
 const myFUNCTION = (id) => {
-    let temp2 = document.getElementById("player2");
-    let temp3 = document.getElementById("player1");
+    temp3 = document.getElementById("player1");
 
-    if (id.innerHTML === "") { // Check if the box is empty
+    if (id.innerHTML === "") { 
         if (turn) {
             id.innerHTML = "X";
-            temp3.style.visibility = "hidden";
-            temp2.style.visibility = "visible";
+            temp3.innerHTML = "Player-O Turn";
         } else {
             id.innerHTML = "O";
-            temp2.style.visibility = "hidden";
-            temp3.style.visibility = "visible";
+            temp3.innerHTML = "Player-X Turn";
         }
         turn = !turn; // Toggle turn
 
         // Check for win or draw conditions
         if (checkWin()) {
-            displayWinner((!turn ? "X" : "O") + " Wins!");
+            displayWinner((!turn ? "Congratulations! X" : "Congratulations! O") + " Wins!");
+            hide();
         } else if (isDraw()) {
             displayWinner("It's a Draw!");
+            hide();
         }
     }
 }
 
 const startgame = () => {
-    // Reset the player display to make Player 1 visible
     let player1 = document.getElementById("player1");
-    let player2 = document.getElementById("player2");
-    player1.style.visibility = "visible";
-    player2.style.visibility = "hidden";
-
+    player1.innerHTML="";
     // Reset the game board
     let boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
@@ -40,7 +34,7 @@ const startgame = () => {
     });
 
     // Reset the turn variable
-    turn = true; // Player 1 starts the game
+    turn = true;
 
     // Hide the winner message
     let winnerMessage = document.getElementById("winner-message");
@@ -62,7 +56,7 @@ const checkWin = () => {
 
     for (const condition of winningConditions) {
         const [a, b, c] = condition.map(cls => document.getElementsByClassName(cls)[0]);
-        if (a.innerHTML && a.innerHTML === b.innerHTML && a.innerHTML === c.innerHTML) {          
+        if (a.innerHTML && a.innerHTML === b.innerHTML && a.innerHTML === c.innerHTML) {         
             return true;
         }
     }
@@ -89,4 +83,7 @@ const displayWinner = (message) => {
 }
 function exit(){
     window.close();
+}
+function hide(){
+    document.getElementById("player1").innerHTML="🥳🥳🥳";
 }

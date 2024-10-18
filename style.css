@@ -4,7 +4,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
-
+#player1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
 #game-text {
     background: -webkit-linear-gradient(hsl(0, 59%, 40%), #333);
     -webkit-background-clip: text;
@@ -45,6 +47,7 @@ body {
 .box:hover {
     background-color: rgb(149, 186, 17);
     transform: scale(1.1);
+   
 }
 
 /* Responsive sizes for larger screens */
