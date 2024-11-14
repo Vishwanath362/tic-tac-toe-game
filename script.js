@@ -18,7 +18,8 @@ const myFUNCTION = (id) => {
             hide();
         } else if (isDraw()) {
             displayWinner("It's a Draw!");
-            hide();
+            // hide();
+            Draww();
         }
     }
 }
@@ -78,6 +79,9 @@ const disablebtns = () => {
 const displayWinner = (message) => {
     let winnerMessage = document.getElementById("winner-message");
     winnerMessage.style.display = "block";
+    winnerMessage.style.color="red";
+    winnerMessage.style.fontFamily="Dancing Script";
+    winnerMessage.style.fontWeight = 900;
     winnerMessage.innerHTML = message;
     disablebtns();
 }
@@ -86,4 +90,7 @@ function exit(){
 }
 function hide(){
     document.getElementById("player1").innerHTML="🥳🥳🥳";
+}
+function Draww(){
+    document.getElementById("player1").innerHTML="";
 }

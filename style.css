@@ -1,5 +1,13 @@
 /* style.css */
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700 */
 
+.dancing-script-unique-class {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
